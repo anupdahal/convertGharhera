@@ -103,6 +103,37 @@ body {
   box-sizing: border-box;
 }
 
+                /* Responsive CSS */
+                @media screen and (max-width: 1150px) {
+
+                  .container {
+                      margin: 10px;
+                      padding: 10px;
+                      flex-direction: column;
+                      box-sizing: border-box;
+                      width: 100%;
+                  }
+      
+                  .inputField {
+                      margin: 10px;
+                      padding: 10px;
+                      /* box-sizing: border-box; */
+                  }
+      
+                  .outputField{
+                      margin: 10px;
+                      padding: 10px;
+                  }
+      
+                  .buttons-container {
+                      width: 10%;
+                      margin: 0;
+                      padding: 0;
+                      /* display: flex; */
+                      /* flex-direction: column; */
+                      align-items: center;
+                  }
+              }
 
 
 
