@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+                /* Responsive CSS */
+            @media screen and (max-width: 1150px) {
+
+            .container {
+                margin: 10px;
+                padding: 10px;
+                flex-direction: column;
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            .inputField {
+                margin: 10px;
+                padding: 10px;
+                /* box-sizing: border-box; */
+            }
+
+            .outputField{
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .buttons-container {
+                width: 10%;
+                margin: 0;
+                padding: 0;
+                /* display: flex; */
+                /* flex-direction: column; */
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inputField">
+            <div class="buttons-container">
+                <button class="button active" id="button1">Bigga</button>
+                <button class="button" id="button2">Ropani</button>
+                <button class="button" id="button3">Square Meter</button>
+                <button class="button" id="button4">Square Feet</button>
+            </div>
+            <hr>
+    
+            <div class="contents">
+                <div class="content active" id="content1">
+                    <input type="number" id="bigga" class="input-field" placeholder="Bigga"  value="0"  onkeyup="bigga()">
+                    <input type="number" id="katth" class="input-field" placeholder="Kattha" value="0"  onkeyup="bigga()">
+                    <input type="number" id="dhur" class="input-field" placeholder="Dhur" value="0"  onkeyup="bigga()">
+                </div>
+                <div class="content" id="content2">
+                    <input type="number" id="ropani" class="input-field" placeholder="Ropani" value="0" onkeyup="ropani()">
+                    <input type="number" id="ana" class="input-field" placeholder="Aana" value="0" onkeyup="ropani()">
+                    <input type="number" id="paisa" class="input-field" placeholder="Paisa" value="0" onkeyup="ropani()">
+                    <input type="number" id="dam" class="input-field" placeholder="Dam" value="0" onkeyup="ropani()">
+                </div>
+                <div class="content" id="content3">
+                    <input type="number" class="input-field" id="squaremeter" placeholder="Square Meter" value="0" onkeyup="squaremeter()">
+                </div>
+                <div class="content" id="content4">
+                    <input type="number" class="input-field" id="squarefeet" placeholder="Square Feet"  value="0" onkeyup="squarefeet()">
+                </div>
+            </div>
+        </div>
+    
+        <!-- biggasout for only css styling -->
+        <div class="outputField">
+            <p id="biggaouts"><strong>In Ropani:</strong></p>
+            <p class="output-content" id="ropaniout" >0 Ropani 0 Aana 0 Paisa 0 Dam</p>
+            <p id="biggaouts"><strong>In Bigha:</strong></p>
+            <p class="output-content" id="biggaout">0 Bigga 0 Kattha 0 Dhur</p>             
+            <p id="biggaouts"><strong>In Sq. Meter:</strong></p>
+            <p class="output-content" id="squaremeterout">0.0000 Square Meter</p>
+            <p id="biggaouts"><strong>In Sq. Feet:</strong></p>
+            <p class="output-content" id="squrefeetout">0.0000 Square Feet</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

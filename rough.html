@@ -1,0 +1,100 @@
+if (squaremeterValue === "") {
+    // Handle the case when squaremeterValue is blank
+} else {
+    let data = squaremeterValue / 1.99;
+
+    if (data < 7.95) {            // this is for dam
+        let damvlu = data;
+        let dammainvlu = Math.floor(damvlu);
+
+        ropaniout.innerHTML = `${dammainvlu} Dam`;
+    }
+    if (data < 31.80) {            // this is for paisa and dam
+        let paisarawvlu = data;
+        let paisaactualvlu = paisarawvlu / 4;
+        let paisaflorvlu = Math.floor(paisaactualvlu);
+
+        let damvlu = (paisaactualvlu - paisaflorvlu);
+        let damactualvlu = damvlu.toFixed(2);
+
+
+        ropaniout.innerHTML = `${paisaflorvlu} Paisa ${damactualvlu} Dam`;
+    } if (data <= 508.72) {
+        let ropanirawvlu = data;
+        let ropaniactualvlu = ropanirawvlu / 16;
+        let ropanifloorvalue = Math.floor(ropaniactualvlu);
+
+        let anaRawValue = (ropaniactualvlu - ropanifloorvalue) / 4;
+        let anaActualValue = Math.floor(anaRawValue);
+
+        let paisaRawValue = (anaRawValue - anaActualValue) / 4;
+        let paisaActualValue = Math.floor(paisaRawValue);
+
+        let damRawValue = (paisaActualValue - paisaRawValue) * 4;
+        let damActualValue = damRawValue.toFixed(2);
+
+        ropaniout.innerHTML = `${ropanifloorvalue} Ropani ${anaActualValue} Ana ${paisaActualValue} Paisa ${damActualValue} Dam`;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    if (squaremeterValue === "") {
+        // Handle the case when squaremeterValue is blank
+    } if(squaremeterValue / 1.99 < 7.95) {
+        let data = squaremeterValue / 1.99;
+    
+        if (data < 7.95) {            // this is for dam
+            let damvlu = data;
+            let dammainvlu = Math.floor(damvlu);
+    
+            ropaniout.innerHTML = `${dammainvlu} Dam`;
+        }
+    }else {
+        let data = squaremeterValue / 31.80;
+    
+        if (data < 31.80) {
+            let anakovalue = data;
+            let anakomannevalue = Math.floor(anakovalue);
+    
+            let paisakovalue = anakovalue - anakomannevalue;
+            let paisakomannevalue = (paisakovalue * 20).toFixed(2);
+    
+            ropaniout.innerHTML = `${anakomannevalue} Ana ${paisakomannevalue} Paisa`;
+        } 
+        
+        else {
+            let data = squaremeterValue / 31.80;
+    
+            let ropanirawvalue = data;
+            // alert(ropanirawvalue);
+            let ropaniactualvalue = ropanirawvalue / 16;
+            let ropanifloorvalue = Math.floor(ropaniactualvalue);
+    
+            let anaRawValue = (ropaniactualvalue - ropanifloorvalue) / 4;
+            let anaActualValue = Math.floor(anaRawValue);
+            
+            let paisaRawValue = (anaActualValue - ropananaRawValueifloorvalue) / 4;
+            let paisaActualValue = Math.floor(anaRawValue);
+    
+            let damRawValue = (paisaActualValue - paisaRawValue);
+            let damActualValue = damRawValue.toFixed(2);
+    
+            ropaniout.innerHTML = `${ropanifloorvalue} Ropani ${anaActualValue} Ana ${paisaActualValue} Paisa ${damActualValue} Dam`;
+        }
+    
+    }
+    }
